@@ -1,19 +1,94 @@
 /* RENTAL DETAILS PAGE - Extends rentals.css */
 
-/* Status-specific styling */
+/* Page Title */
+.page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.back-link .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Status Banner Enhanced */
+.status-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: calc(var(--radius) * 1.5);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
 .status-banner.status-active {
     background: linear-gradient(135deg, hsl(142.1, 76.2%, 95%) 0%, white 100%);
+    border: 2px solid var(--success);
     animation: fadeInDown 0.5s ease;
 }
 
 .status-banner.status-upcoming {
     background: linear-gradient(135deg, hsl(217, 91%, 95%) 0%, white 100%);
-    border-color: hsl(217, 91%, 40%);
+    border: 2px solid hsl(217, 91%, 40%);
 }
 
 .status-banner.status-completed {
     background: linear-gradient(135deg, var(--muted) 0%, white 100%);
-    border-color: var(--muted-foreground);
+    border: 2px solid var(--muted-foreground);
+}
+
+.status-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.status-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.875rem;
+    background: white;
+    border-radius: 50%;
+    color: var(--success);
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+}
+
+.status-banner.status-upcoming .status-icon {
+    color: hsl(217, 91%, 40%);
+}
+
+.status-banner.status-completed .status-icon {
+    color: var(--muted-foreground);
+}
+
+.status-content h2 {
+    margin-bottom: 0.375rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.status-content p {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: 1rem;
 }
 
 @keyframes fadeInDown {
@@ -27,33 +102,88 @@
     }
 }
 
-/* Enhanced timeline styling */
-.timeline-item.completed .timeline-content h5 {
-    color: var(--success);
+/* Rental Details Container */
+.rental-details-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 2.5rem;
 }
 
-.timeline-item.active .timeline-content h5 {
-    color: var(--primary);
-    font-weight: 700;
+/* Details Cards */
+.details-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/* Enhanced action buttons */
-.action-btn {
-    transition: all 0.3s ease;
-}
-
-.action-btn:hover {
-    transform: translateX(5px);
+.details-card {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 2rem;
     box-shadow: var(--shadow-md);
 }
 
-.action-btn.danger:hover {
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+.details-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 2rem;
 }
 
-/* Bike info styling */
-.bike-info-row .bike-image {
+.details-card .card-header h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.booking-number {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 0.5rem 1rem;
     border-radius: var(--radius);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--foreground);
+}
+
+/* Bike Info Row */
+.bike-info-row {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--muted);
+    border-radius: var(--radius);
+    align-items: center;
+}
+
+.bike-info-row .bike-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    flex-shrink: 0;
+    border: 2px solid var(--border);
     box-shadow: var(--shadow-md);
     transition: all 0.3s;
 }
@@ -63,17 +193,443 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* Payment breakdown enhanced */
+.bike-details h3 {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.bike-type {
+    color: var(--muted-foreground);
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.bike-plate {
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+}
+
+.bike-plate strong {
+    color: var(--foreground);
+}
+
+/* Enhanced Timeline */
+.timeline {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-top: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 3px;
+    background: var(--border);
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -3.25rem;
+    top: -0.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.timeline-marker svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+}
+
+.timeline-item.completed .timeline-marker {
+    background: var(--success);
+    border-color: var(--success);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.timeline-item.completed .timeline-marker svg {
+    stroke: white;
+}
+
+.timeline-item.active .timeline-marker {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.timeline-item.active .timeline-marker svg {
+    stroke: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.timeline-content h5 {
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+    font-weight: 600;
+}
+
+.timeline-item.completed .timeline-content h5 {
+    color: var(--success);
+}
+
+.timeline-item.active .timeline-content h5 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.timeline-content p {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+/* Location Info */
+.location-info {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--muted);
+    border-radius: var(--radius);
+}
+
+.location-info .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.location-name {
+    font-weight: 700;
+    font-size: 1.0625rem;
+    margin-bottom: 0.375rem;
+}
+
+.location-address,
+.location-phone {
+    color: var(--muted-foreground);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Items List */
+.items-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.items-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1rem 1.25rem;
+    background: var(--muted);
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.items-list li .icon-sm {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--success);
+}
+
+/* Payment Breakdown Enhanced */
 .payment-breakdown {
     background: var(--muted);
-    padding: 1.5rem;
+    padding: 1.75rem;
     border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9375rem;
+}
+
+.payment-row span:last-child {
+    font-weight: 600;
+}
+
+.payment-row.subtotal {
+    padding-top: 1rem;
+    border-top: 2px dashed var(--border);
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .payment-row.total {
     background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: var(--radius);
+    margin-top: 0.75rem;
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.payment-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background: hsl(142.1, 76.2%, 95%);
+    border-radius: var(--radius);
+    margin: 1.25rem 0;
+    border: 1px solid var(--success);
+}
+
+.status-label {
+    font-weight: 600;
+}
+
+.badge {
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--radius);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-success {
+    background: var(--success);
+    color: white;
+}
+
+/* Sidebar Enhanced */
+.details-sidebar {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-card {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-md);
+}
+
+.sidebar-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+/* Actions List */
+.actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1rem 1.25rem;
+    background: var(--background);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.action-btn .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--primary);
+}
+
+.action-btn:hover {
+    background: var(--muted);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.action-btn.danger {
+    color: var(--destructive);
+}
+
+.action-btn.danger .icon {
+    color: var(--destructive);
+}
+
+.action-btn.danger:hover {
+    background: hsl(0, 84.2%, 97%);
+    border-color: var(--destructive);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* Tips List */
+.tips-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li {
+    padding: 0.625rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+    line-height: 1.5;
+}
+
+.tips-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+}
+
+/* Emergency Card */
+.sidebar-card.emergency {
+    background: linear-gradient(135deg, hsl(0, 84.2%, 98%) 0%, white 100%);
+    border: 2px solid var(--destructive);
+    text-align: center;
+}
+
+.sidebar-card.emergency .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto 1rem;
+    color: var(--destructive);
+    animation: pulse 2s infinite;
+}
+
+.sidebar-card.emergency h3 {
+    color: var(--destructive);
+    font-size: 1.25rem;
+}
+
+.sidebar-card.emergency p {
+    color: var(--muted-foreground);
+    margin-bottom: 0.75rem;
+}
+
+.emergency-phone {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--destructive);
     margin-top: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.emergency-phone:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .rental-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .details-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .sidebar-card.emergency {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .status-banner {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .status-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bike-info-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-card.emergency {
+        grid-column: span 1;
+    }
+
+    .rental-badge {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-card {
+        padding: 1.25rem;
+    }
+
+    .sidebar-card {
+        padding: 1.25rem;
+    }
+
+    .payment-row.total {
+        font-size: 1.125rem;
+        padding: 1rem;
+    }
 }
 

@@ -88,7 +88,7 @@ a {
     transition: color 0.2s;
 }
 
-a:hover {
+a:hover:not(.btn):not(.user-avatar) {
     color: var(--primary);
 }
 
@@ -258,10 +258,17 @@ p {
     cursor: pointer;
     border: 2px solid transparent;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
+
 
 .btn-primary {
     background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
     color: white;
 }
 
@@ -271,13 +278,29 @@ p {
     color: var(--foreground);
 }
 
+.btn-outline:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
 .btn-ghost {
     background: transparent;
     color: var(--foreground);
 }
 
+.btn-ghost:hover {
+    background: var(--muted);
+    color: var(--foreground);
+}
+
 .btn-destructive {
     background: var(--destructive);
+    color: var(--destructive-foreground);
+}
+
+.btn-destructive:hover {
+    background: hsl(0, 84.2%, 50%);
     color: var(--destructive-foreground);
 }
 
