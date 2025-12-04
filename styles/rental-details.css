@@ -1,0 +1,79 @@
+/* RENTAL DETAILS PAGE - Extends rentals.css */
+
+/* Status-specific styling */
+.status-banner.status-active {
+    background: linear-gradient(135deg, hsl(142.1, 76.2%, 95%) 0%, white 100%);
+    animation: fadeInDown 0.5s ease;
+}
+
+.status-banner.status-upcoming {
+    background: linear-gradient(135deg, hsl(217, 91%, 95%) 0%, white 100%);
+    border-color: hsl(217, 91%, 40%);
+}
+
+.status-banner.status-completed {
+    background: linear-gradient(135deg, var(--muted) 0%, white 100%);
+    border-color: var(--muted-foreground);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced timeline styling */
+.timeline-item.completed .timeline-content h5 {
+    color: var(--success);
+}
+
+.timeline-item.active .timeline-content h5 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Enhanced action buttons */
+.action-btn {
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.action-btn.danger:hover {
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Bike info styling */
+.bike-info-row .bike-image {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s;
+}
+
+.bike-info-row .bike-image:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Payment breakdown enhanced */
+.payment-breakdown {
+    background: var(--muted);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+.payment-row.total {
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-top: 0.5rem;
+}
+

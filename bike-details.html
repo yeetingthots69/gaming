@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Xe - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bike-details.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html" class="active">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-ghost">Đăng Nhập</button>
+                    <button class="btn btn-primary">Đăng Ký</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <a href="bikes.html" class="back-link">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Quay Lại Danh Sách Xe
+            </a>
+
+            <div class="bike-details-container">
+                <!-- Left Column: Images -->
+                <div class="bike-images">
+                    <div class="main-image">
+                        <img src="../images/placeholder-bike.png" alt="Toyota Camry" id="main-bike-image">
+                        <span class="bike-badge">Phổ Biến</span>
+                    </div>
+                    <div class="image-thumbnails">
+                        <img src="../images/placeholder-bike.png" alt="Góc nhìn 1" class="thumbnail active">
+                        <img src="../images/placeholder-bike.png" alt="Góc nhìn 2" class="thumbnail">
+                        <img src="../images/placeholder-bike.png" alt="Góc nhìn 3" class="thumbnail">
+                    </div>
+                </div>
+
+                <!-- Right Column: Details -->
+                <div class="bike-info">
+                    <div class="bike-header">
+                        <div>
+                            <h1 class="bike-title">Toyota Camry</h1>
+                            <p class="bike-type">Sedan Cao Cấp</p>
+                        </div>
+                        <div class="bike-rating-large">
+                            <span class="star-large">★</span>
+                            <div>
+                                <div class="rating-value">4.8</div>
+                                <div class="rating-count">24 đánh giá</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="price-info">
+                            <span class="price-amount">800,000₫</span>
+                            <span class="price-period">/ngày</span>
+                        </div>
+                        <div class="rental-duration">
+                            <span>Thuê 5 ngày: <strong>4,000,000₫</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="bike-specs-detailed">
+                        <h3>Thông Số Kỹ Thuật</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                <div>
+                                    <span class="spec-label">Động Cơ</span>
+                                    <span class="spec-value">2.5L</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="8" x2="12" y2="12"/>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                </svg>
+                                <div>
+                                    <span class="spec-label">Hộp Số</span>
+                                    <span class="spec-value">Tự Động</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <div>
+                                    <span class="spec-label">Nhiên Liệu</span>
+                                    <span class="spec-value">Xăng</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"/>
+                                </svg>
+                                <div>
+                                    <span class="spec-label">Năm Sản Xuất</span>
+                                    <span class="spec-value">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-info">
+                        <h3>Địa Điểm Có Sẵn</h3>
+                        <div class="locations-list">
+                            <div class="location-item">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Hà Nội - Phố Cổ</span>
+                            </div>
+                            <div class="location-item">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Đà Nẵng - Khu Biển</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>Giới Thiệu Về Xe</h3>
+                        <p>Toyota Camry là dòng sedan cao cấp, sang trọng và tiện nghi, hoàn hảo cho các chuyến đi công tác hoặc du lịch gia đình. Với động cơ 2.5L mạnh mẽ và thiết kế hiện đại, xe mang lại trải nghiệm lái êm ái và tiết kiệm nhiên liệu.</p>
+                        <p>Xe được trang bị đầy đủ các tính năng an toàn như túi khí, hệ thống phanh ABS, camera lùi và hệ thống giải trí màn hình cảm ứng.</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="checkout.html?id=1" class="btn btn-primary btn-lg">Đặt Xe Ngay</a>
+                        <button class="btn btn-outline btn-lg">Thêm Vào Yêu Thích</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <h2>Đánh Giá Từ Khách Hàng</h2>
+                    <div class="reviews-summary">
+                        <div class="rating-large">
+                            <span class="star-large">★</span>
+                            <span class="rating-number">4.8</span>
+                        </div>
+                        <span class="reviews-count">Dựa trên 24 đánh giá</span>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="avatar">NT</div>
+                                <div>
+                                    <div class="reviewer-name">Nguyễn Thành</div>
+                                    <div class="review-date">01 Tháng 12, 2025</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="review-text">Xe rất tốt! Chạy êm và tiết kiệm xăng. Nhân viên hỗ trợ rất nhiệt tình và chuyên nghiệp.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="avatar">TH</div>
+                                <div>
+                                    <div class="reviewer-name">Trần Hương</div>
+                                    <div class="review-date">28 Tháng 11, 2025</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star-empty">☆</span>
+                            </div>
+                        </div>
+                        <p class="review-text">Xe mới và sạch sẽ. Giá cả hợp lý cho chất lượng xe. Sẽ thuê lại lần sau.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="avatar">PL</div>
+                                <div>
+                                    <div class="reviewer-name">Phạm Long</div>
+                                    <div class="review-date">25 Tháng 11, 2025</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="review-text">Tuyệt vời cho chuyến đi từ Hà Nội đến Hạ Long. Xe thoải mái, đáng tin cậy và tiết kiệm nhiên liệu. Rất đáng để thuê!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch Vụ</h3>
+                    <ul>
+                        <li><a href="bikes.html">Thuê Xe Ô Tô</a></li>
+                        <li><a href="location-finder.html">Địa Điểm</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <p>support@vroomvroom.vn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bike-details.js"></script>
+</body>
+</html>

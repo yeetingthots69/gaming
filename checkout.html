@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="user-avatar">NA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <a href="bike-details.html?id=1" class="back-link">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Quay Lại Chi Tiết Xe
+            </a>
+
+            <h1 class="page-title">Hoàn Tất Đặt Xe</h1>
+
+            <div class="checkout-container">
+                <!-- Left Column: Booking Form -->
+                <div class="booking-form-section">
+                    <form id="checkout-form">
+                        <!-- Rental Dates -->
+                        <div class="form-card">
+                            <h2 class="form-section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                Thời Gian Thuê
+                            </h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickup-date">Ngày Nhận Xe</label>
+                                    <input type="date" id="pickup-date" class="form-control" value="2025-12-15" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="return-date">Ngày Trả Xe</label>
+                                    <input type="date" id="return-date" class="form-control" value="2025-12-20" required>
+                                </div>
+                            </div>
+                            <div class="rental-summary-info">
+                                <span>Tổng thời gian thuê: <strong>5 ngày</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- Location Selection -->
+                        <div class="form-card">
+                            <h2 class="form-section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Địa Điểm Nhận & Trả Xe
+                            </h2>
+                            <div class="form-group">
+                                <label for="pickup-location">Chọn Địa Điểm</label>
+                                <select id="pickup-location" class="form-control" required>
+                                    <option value="">Chọn địa điểm</option>
+                                    <option value="hanoi" selected>Hà Nội - Phố Cổ</option>
+                                    <option value="hcm">TP. Hồ Chí Minh - Quận 1</option>
+                                    <option value="danang">Đà Nẵng - Khu Biển</option>
+                                    <option value="nhatrang">Nha Trang - Trung Tâm</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Options -->
+                        <div class="form-card">
+                            <h2 class="form-section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="16" x2="12" y2="12"/>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                </svg>
+                                Tùy Chọn Thêm
+                            </h2>
+                            <div class="options-list">
+                                <label class="option-item">
+                                    <input type="checkbox" class="option-checkbox" id="child-seat" value="100000">
+                                    <div class="option-content">
+                                        <div class="option-name">Ghế Trẻ Em</div>
+                                        <div class="option-price">100,000₫/ngày</div>
+                                    </div>
+                                </label>
+                                <label class="option-item">
+                                    <input type="checkbox" class="option-checkbox" id="gps" value="50000">
+                                    <div class="option-content">
+                                        <div class="option-name">Định Vị GPS</div>
+                                        <div class="option-price">50,000₫/ngày</div>
+                                    </div>
+                                </label>
+                                <label class="option-item">
+                                    <input type="checkbox" class="option-checkbox" id="dashcam" value="80000">
+                                    <div class="option-content">
+                                        <div class="option-name">Camera Hành Trình</div>
+                                        <div class="option-price">80,000₫/ngày</div>
+                                    </div>
+                                </label>
+                                <label class="option-item">
+                                    <input type="checkbox" class="option-checkbox" id="driver" value="500000">
+                                    <div class="option-content">
+                                        <div class="option-name">Thuê Tài Xế</div>
+                                        <div class="option-price">500,000₫/ngày</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-card">
+                            <h2 class="form-section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                    <line x1="1" y1="10" x2="23" y2="10"/>
+                                </svg>
+                                Phương Thức Thanh Toán
+                            </h2>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="vnpay" checked>
+                                    <div class="payment-content">
+                                        <div class="payment-name">VNPay</div>
+                                        <div class="payment-description">Thanh toán an toàn qua VNPay</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cash">
+                                    <div class="payment-content">
+                                        <div class="payment-name">Tiền Mặt Khi Nhận Xe</div>
+                                        <div class="payment-description">Thanh toán khi nhận xe</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-card">
+                            <label class="terms-checkbox">
+                                <input type="checkbox" id="terms" required>
+                                <span>Tôi đồng ý với <a href="#">điều khoản và điều kiện</a> và <a href="#">chính sách thuê xe</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Tiến Hành Thanh Toán</button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="order-summary-section">
+                    <div class="order-summary-card">
+                        <h2>Tổng Quan Đơn Hàng</h2>
+
+                        <!-- Car Info -->
+                        <div class="summary-bike-info">
+                            <img src="../images/placeholder-bike.png" alt="Toyota Camry" class="summary-bike-image">
+                            <div>
+                                <h3>Toyota Camry</h3>
+                                <p class="summary-bike-type">Sedan Cao Cấp • 2.5L</p>
+                            </div>
+                        </div>
+
+                        <!-- Price Breakdown -->
+                        <div class="price-breakdown">
+                            <div class="price-item">
+                                <span>Thuê xe (5 ngày × 800,000₫)</span>
+                                <span>4,000,000₫</span>
+                            </div>
+                            <div class="price-item" id="peripherals-total">
+                                <span>Tùy chọn thêm</span>
+                                <span>0₫</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Bảo hiểm</span>
+                                <span>200,000₫</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Phí dịch vụ</span>
+                                <span>100,000₫</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="price-item">
+                                <span>Tạm tính</span>
+                                <span id="subtotal">4,300,000₫</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Thuế (10%)</span>
+                                <span id="tax">430,000₫</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="price-item total">
+                                <span>Tổng Cộng</span>
+                                <span id="total">4,730,000₫</span>
+                            </div>
+                        </div>
+
+                        <!-- Security Badge -->
+                        <div class="security-badge">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <div>
+                                <div class="security-title">Thanh Toán An Toàn</div>
+                                <div class="security-text">Thông tin thanh toán của bạn được mã hóa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch Vụ</h3>
+                    <ul>
+                        <li><a href="bikes.html">Thuê Xe Ô Tô</a></li>
+                        <li><a href="location-finder.html">Địa Điểm</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <p>support@vroomvroom.vn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/checkout.js"></script>
+</body>
+</html>

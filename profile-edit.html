@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh Sửa Hồ Sơ - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile-edit.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="user-avatar active">NA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <a href="profile.html" class="back-link">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Quay Lại Hồ Sơ
+            </a>
+
+            <h1 class="page-title">Chỉnh Sửa Hồ Sơ</h1>
+
+            <div class="edit-container">
+                <!-- Profile Photo Section -->
+                <div class="edit-card">
+                    <h2 class="card-title">Ảnh Đại Diện</h2>
+                    <div class="photo-section">
+                        <div class="current-photo">
+                            <div class="profile-avatar-xlarge">NA</div>
+                        </div>
+                        <div class="photo-actions">
+                            <p class="photo-hint">JPG, PNG hoặc GIF. Tối đa 2MB.</p>
+                            <div class="photo-buttons">
+                                <label for="photo-upload" class="btn btn-primary">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                    Tải Ảnh Mới
+                                </label>
+                                <input type="file" id="photo-upload" accept="image/*" hidden>
+                                <button class="btn btn-ghost">Xóa Ảnh</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="edit-card">
+                    <h2 class="card-title">Thông Tin Cá Nhân</h2>
+                    <form id="edit-profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">Họ *</label>
+                                <input type="text" id="first-name" class="form-control" value="Nguyễn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Tên *</label>
+                                <input type="text" id="last-name" class="form-control" value="An" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Địa Chỉ Email *</label>
+                            <input type="email" id="email" class="form-control" value="nguyenan@example.com" required>
+                            <span class="form-hint">Email này đã được xác minh</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Số Điện Thoại *</label>
+                            <input type="tel" id="phone" class="form-control" value="+84 123 456 789" required>
+                            <span class="form-hint">Dùng cho thông báo thuê xe và hỗ trợ</span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob">Ngày Sinh *</label>
+                                <input type="date" id="dob" class="form-control" value="1990-01-15" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Giới Tính</label>
+                                <select id="gender" class="form-control">
+                                    <option value="">Không muốn nói</option>
+                                    <option value="male" selected>Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Địa Chỉ</label>
+                            <input type="text" id="address" class="form-control" value="123 Hàng Bạc, Hoàn Kiếm">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Thành Phố</label>
+                                <input type="text" id="city" class="form-control" value="Hà Nội">
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-code">Mã Bưu Điện</label>
+                                <input type="text" id="postal-code" class="form-control" value="100000">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Preferences -->
+                <div class="edit-card">
+                    <h2 class="card-title">Tùy Chọn</h2>
+                    <div class="preferences-section">
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Thông Báo Email</h4>
+                                <p>Nhận xác nhận đặt xe và cập nhật qua email</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Thông Báo SMS</h4>
+                                <p>Nhận nhắc nhở thuê xe và cập nhật quan trọng qua SMS</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Thông Tin Khuyến Mãi</h4>
+                                <p>Nhận ưu đãi và khuyến mãi đặc biệt</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Bản Tin</h4>
+                                <p>Nhận mẹo du lịch và gợi ý điểm đến</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language & Currency -->
+                <div class="edit-card">
+                    <h2 class="card-title">Ngôn Ngữ & Tiền Tệ</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="language">Ngôn Ngữ Ưu Tiên</label>
+                            <select id="language" class="form-control">
+                                <option value="vi" selected>Tiếng Việt</option>
+                                <option value="en">English</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="currency">Tiền Tệ</label>
+                            <select id="currency" class="form-control">
+                                <option value="vnd" selected>VND (₫)</option>
+                                <option value="usd">USD ($)</option>
+                                <option value="eur">EUR (€)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="edit-card">
+                    <h2 class="card-title">Liên Hệ Khẩn Cấp</h2>
+                    <p class="card-description">Người chúng tôi có thể liên hệ trong trường hợp khẩn cấp khi bạn thuê xe</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergency-name">Tên Người Liên Hệ</label>
+                            <input type="text" id="emergency-name" class="form-control" value="Nguyễn Bình">
+                        </div>
+                        <div class="form-group">
+                            <label for="emergency-relationship">Mối Quan Hệ</label>
+                            <input type="text" id="emergency-relationship" class="form-control" value="Vợ/Chồng">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergency-phone">Số Điện Thoại</label>
+                        <input type="tel" id="emergency-phone" class="form-control" value="+84 987 654 321">
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <a href="profile.html" class="btn btn-ghost">Hủy</a>
+                    <button type="submit" form="edit-profile-form" class="btn btn-primary">Lưu Thay Đổi</button>
+                </div>
+
+                <!-- Info Banner -->
+                <div class="info-banner">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <div>
+                        <strong>Thông Báo Quyền Riêng Tư:</strong> Thông tin cá nhân của bạn được lưu trữ an toàn và chỉ sử dụng cho dịch vụ thuê xe và liên lạc. Chúng tôi không chia sẻ dữ liệu của bạn với bên thứ ba mà không có sự đồng ý.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/profile-edit.js"></script>
+</body>
+</html>

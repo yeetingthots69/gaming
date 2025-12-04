@@ -1,0 +1,362 @@
+/* BIKE DETAILS PAGE STYLES */
+
+.bike-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.bike-images {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+}
+
+.main-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: calc(var(--radius) * 1.5);
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    background: linear-gradient(135deg, var(--muted) 0%, var(--secondary) 100%);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-lg);
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    background: var(--muted);
+}
+
+.thumbnail.active {
+    border-color: var(--primary);
+    border-width: 3px;
+}
+
+.bike-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bike-info h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.625rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.bike-rating-large {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.star-large {
+    font-size: 2.5rem;
+    color: #fbbf24;
+}
+
+.rating-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--foreground);
+}
+
+.rating-count {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+}
+
+.price-section {
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    padding: 2rem;
+    border-radius: calc(var(--radius) * 1.5);
+    margin: 1.75rem 0;
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.price-info {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    margin-bottom: 0.75rem;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.rental-duration {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+}
+
+.rental-duration strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.bike-specs-detailed {
+    margin: 2rem 0;
+}
+
+.bike-specs-detailed h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.specs-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.spec-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    border-radius: var(--radius);
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+.spec-label {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spec-value {
+    display: block;
+    font-weight: 700;
+    font-size: 1.0625rem;
+}
+
+.location-info,
+.description-section {
+    margin: 2rem 0;
+}
+
+.location-info h3,
+.description-section h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.locations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.location-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.location-item .icon {
+    color: var(--primary);
+}
+
+.description-section p {
+    color: var(--muted-foreground);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 3px solid var(--border);
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.reviews-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.reviews-summary {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rating-large {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.rating-number {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.reviews-count {
+    color: var(--muted-foreground);
+    font-size: 1rem;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.review-card {
+    padding: 2rem;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: calc(var(--radius) * 1.5);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1.25rem;
+}
+
+.reviewer-info {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, hsl(24, 100%, 60%) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 1.0625rem;
+    margin-bottom: 0.375rem;
+}
+
+.review-date {
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+}
+
+.review-rating {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.review-rating .star {
+    font-size: 1.125rem;
+}
+
+.review-text {
+    color: var(--muted-foreground);
+    line-height: 1.8;
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .bike-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bike-images {
+        position: static;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        height: 320px;
+    }
+
+    .reviews-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .bike-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+

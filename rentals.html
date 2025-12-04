@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn Thuê Của Tôi - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/rentals.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html" class="active">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="user-avatar">NA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Đơn Thuê Của Tôi</h1>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="active">Đang Thuê</button>
+                <button class="tab-btn" data-tab="upcoming">Sắp Tới</button>
+                <button class="tab-btn" data-tab="completed">Hoàn Thành</button>
+                <button class="tab-btn" data-tab="cancelled">Đã Hủy</button>
+            </div>
+
+            <!-- Active Rentals Tab -->
+            <div class="tab-content active" id="active-tab">
+                <div class="rentals-grid">
+                    <div class="rental-card">
+                        <div class="rental-header">
+                            <span class="rental-badge status-active">Đang Thuê</span>
+                            <span class="rental-id">Đơn #12345</span>
+                        </div>
+
+                        <div class="rental-content">
+                            <div class="rental-bike-info">
+                                <img src="../images/placeholder-bike.png" alt="Toyota Camry" class="rental-bike-image">
+                                <div>
+                                    <h3 class="rental-bike-name">Toyota Camry</h3>
+                                    <p class="rental-bike-type">Sedan Cao Cấp • 2.5L</p>
+                                </div>
+                            </div>
+
+                            <div class="rental-details">
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Nhận Xe</span>
+                                        <span class="detail-value">01/12/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Trả Xe</span>
+                                        <span class="detail-value">05/12/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Địa Điểm</span>
+                                        <span class="detail-value">Hà Nội - Phố Cổ</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Tổng Tiền</span>
+                                        <span class="detail-value">4,000,000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rental-actions">
+                            <a href="rental-details.html?id=12345" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                            <button class="btn btn-destructive btn-sm">Hủy Đơn Thuê</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Rentals Tab -->
+            <div class="tab-content" id="upcoming-tab">
+                <div class="rentals-grid">
+                    <div class="rental-card">
+                        <div class="rental-header">
+                            <span class="rental-badge status-upcoming">Sắp Tới</span>
+                            <span class="rental-id">Đơn #12346</span>
+                        </div>
+
+                        <div class="rental-content">
+                            <div class="rental-bike-info">
+                                <img src="../images/placeholder-bike.png" alt="Honda CR-V" class="rental-bike-image">
+                                <div>
+                                    <h3 class="rental-bike-name">Honda CR-V</h3>
+                                    <p class="rental-bike-type">SUV 7 Chỗ • 1.5L Turbo</p>
+                                </div>
+                            </div>
+
+                            <div class="rental-details">
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Nhận Xe</span>
+                                        <span class="detail-value">15/12/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Trả Xe</span>
+                                        <span class="detail-value">20/12/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Địa Điểm</span>
+                                        <span class="detail-value">TP. Hồ Chí Minh</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Tổng Tiền</span>
+                                        <span class="detail-value">4,750,000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rental-actions">
+                            <a href="rental-details.html?id=12346" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                            <button class="btn btn-destructive btn-sm">Hủy Đơn Thuê</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Rentals Tab -->
+            <div class="tab-content" id="completed-tab">
+                <div class="rentals-grid">
+                    <div class="rental-card">
+                        <div class="rental-header">
+                            <span class="rental-badge status-completed">Hoàn Thành</span>
+                            <span class="rental-id">Đơn #12344</span>
+                        </div>
+
+                        <div class="rental-content">
+                            <div class="rental-bike-info">
+                                <img src="../images/placeholder-bike.png" alt="Mazda CX-5" class="rental-bike-image">
+                                <div>
+                                    <h3 class="rental-bike-name">Mazda CX-5</h3>
+                                    <p class="rental-bike-type">SUV Crossover • 2.0L</p>
+                                </div>
+                            </div>
+
+                            <div class="rental-details">
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Nhận Xe</span>
+                                        <span class="detail-value">20/11/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Ngày Trả Xe</span>
+                                        <span class="detail-value">25/11/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Địa Điểm</span>
+                                        <span class="detail-value">Đà Nẵng</span>
+                                    </div>
+                                </div>
+
+                                <div class="rental-detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    <div>
+                                        <span class="detail-label">Tổng Tiền</span>
+                                        <span class="detail-value">4,500,000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rental-actions">
+                            <a href="rental-details.html?id=12344" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                            <button class="btn btn-primary btn-sm">Để Lại Đánh Giá</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cancelled Rentals Tab -->
+            <div class="tab-content" id="cancelled-tab">
+                <div class="empty-state">
+                    <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="15" y1="9" x2="9" y2="15"/>
+                        <line x1="9" y1="9" x2="15" y2="15"/>
+                    </svg>
+                    <h3>Không Có Đơn Đã Hủy</h3>
+                    <p>Bạn chưa hủy đơn thuê nào.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Dịch Vụ</h3>
+                    <ul>
+                        <li><a href="bikes.html">Thuê Xe Ô Tô</a></li>
+                        <li><a href="location-finder.html">Địa Điểm</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <p>support@vroomvroom.vn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/rentals.js"></script>
+</body>
+</html>

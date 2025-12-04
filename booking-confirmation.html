@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Đặt Xe - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/booking-confirmation.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="user-avatar">NA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Success Banner -->
+            <div class="confirmation-banner">
+                <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <div class="confirmation-content">
+                    <h1>Đặt Xe Thành Công!</h1>
+                    <p>Đơn thuê xe của bạn đã được xác nhận. Hãy chuẩn bị cho chuyến đi!</p>
+                </div>
+            </div>
+
+            <!-- Booking Details Card -->
+            <div class="confirmation-container">
+                <div class="booking-details-card">
+                    <div class="card-header">
+                        <h2>Chi Tiết Đặt Xe</h2>
+                        <span class="booking-number">Đơn #12346</span>
+                    </div>
+
+                    <!-- Car Information -->
+                    <div class="section">
+                        <h3 class="section-title">Xe Của Bạn</h3>
+                        <div class="bike-info-row">
+                            <img src="../images/placeholder-bike.png" alt="Toyota Camry" class="bike-thumbnail">
+                            <div class="bike-details">
+                                <h4>Toyota Camry</h4>
+                                <p class="bike-type">Sedan Cao Cấp • 2.5L • Tự Động</p>
+                                <div class="bike-rating">
+                                    <span class="star">★</span>
+                                    <span>4.8</span>
+                                    <span class="reviews-text">(24 đánh giá)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rental Period -->
+                    <div class="section">
+                        <h3 class="section-title">Thời Gian Thuê</h3>
+                        <div class="date-range">
+                            <div class="date-item">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                <div>
+                                    <span class="date-label">Nhận Xe</span>
+                                    <span class="date-value">15/12/2025 lúc 9:00 SA</span>
+                                </div>
+                            </div>
+                            <div class="date-separator">→</div>
+                            <div class="date-item">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                <div>
+                                    <span class="date-label">Trả Xe</span>
+                                    <span class="date-value">20/12/2025 lúc 6:00 CH</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="duration-info">Tổng Thời Gian: <strong>5 ngày</strong></p>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="section">
+                        <h3 class="section-title">Địa Điểm Nhận & Trả Xe</h3>
+                        <div class="location-info">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p class="location-name">Hà Nội - Phố Cổ</p>
+                                <p class="location-address">123 Hàng Bạc, Quận Hoàn Kiếm, Hà Nội</p>
+                                <p class="location-phone">Điện thoại: +84 24 3826 xxxx</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm">Xem Chỉ Đường</button>
+                    </div>
+
+                    <!-- Payment Summary -->
+                    <div class="section">
+                        <h3 class="section-title">Chi Tiết Thanh Toán</h3>
+                        <div class="payment-breakdown">
+                            <div class="payment-row">
+                                <span>Thuê xe (5 ngày × 800,000₫)</span>
+                                <span>4,000,000₫</span>
+                            </div>
+                            <div class="payment-row">
+                                <span>Ghế trẻ em</span>
+                                <span>500,000₫</span>
+                            </div>
+                            <div class="payment-row">
+                                <span>Bảo hiểm</span>
+                                <span>200,000₫</span>
+                            </div>
+                            <div class="payment-row">
+                                <span>Phí dịch vụ</span>
+                                <span>100,000₫</span>
+                            </div>
+                            <div class="payment-row subtotal">
+                                <span>Tạm tính</span>
+                                <span>4,800,000₫</span>
+                            </div>
+                            <div class="payment-row">
+                                <span>Thuế (10%)</span>
+                                <span>480,000₫</span>
+                            </div>
+                            <div class="payment-row total">
+                                <span>Đã Thanh Toán</span>
+                                <span>5,280,000₫</span>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <span class="payment-label">Phương thức:</span>
+                            <span class="payment-value">VNPay (Đã thanh toán)</span>
+                            <span class="payment-status-badge">Hoàn Thành</span>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="section">
+                        <h3 class="section-title">Các Bước Tiếp Theo</h3>
+                        <ol class="next-steps-list">
+                            <li>Kiểm tra email để nhận xác nhận đặt xe và hợp đồng thuê</li>
+                            <li>Lưu địa chỉ và số điện thoại điểm nhận xe</li>
+                            <li>Chuẩn bị bằng lái xe và CMND/CCCD khi nhận xe</li>
+                            <li>Đến địa điểm sớm 10-15 phút trước giờ hẹn</li>
+                            <li>Kiểm tra xe cùng nhân viên của chúng tôi</li>
+                            <li>Ký hợp đồng và bắt đầu hành trình!</li>
+                        </ol>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-outline">Tải Hóa Đơn</button>
+                        <button class="btn btn-outline">Thêm Vào Lịch</button>
+                        <a href="rentals.html" class="btn btn-primary">Xem Đơn Thuê</a>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <h3>Cần Hỗ Trợ?</h3>
+                    <p>Đội ngũ hỗ trợ của chúng tôi sẵn sàng 24/7</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+84 123 456 789</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>support@vroomvroom.vn</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block">Liên Hệ Hỗ Trợ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/booking-confirmation.js"></script>
+</body>
+</html>

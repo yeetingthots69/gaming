@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả Tìm Kiếm - VroomVroom</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bike-search-results.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                        <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                    </svg>
+                    <span class="logo-text">VroomVroom.vn</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bikes.html" class="active">Xe Ô Tô</a></li>
+                    <li><a href="location-finder.html">Địa Điểm</a></li>
+                    <li><a href="rentals.html">Đơn Thuê</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="user-avatar">NA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                Quay Lại Trang Chủ
+            </a>
+
+            <div class="search-results-header">
+                <h1>Kết Quả Tìm Kiếm</h1>
+                <p class="search-summary">Hiển thị kết quả cho xe Sedan tại <strong>Hà Nội</strong> từ <strong>15/12 - 20/12/2025</strong></p>
+            </div>
+
+            <!-- Active Filters -->
+            <div class="active-filters">
+                <span class="filter-tag">
+                    Sedan
+                    <button class="remove-filter">×</button>
+                </span>
+                <span class="filter-tag">
+                    Hà Nội
+                    <button class="remove-filter">×</button>
+                </span>
+                <button class="btn btn-ghost btn-sm">Xóa Tất Cả Bộ Lọc</button>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="results-container">
+                <aside class="filters-sidebar">
+                    <h3>Lọc Kết Quả</h3>
+
+                    <div class="filter-section">
+                        <h4>Khoảng Giá</h4>
+                        <div class="price-range-inputs">
+                            <input type="number" placeholder="Tối thiểu" class="form-control">
+                            <span>-</span>
+                            <input type="number" placeholder="Tối đa" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Số Chỗ Ngồi</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> 4-5 Chỗ
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> 7 Chỗ
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Trên 7 Chỗ
+                        </label>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Hộp Số</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Tự Động
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Số Sàn
+                        </label>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Đánh Giá</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> 4+ Sao
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> 3+ Sao
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block">Áp Dụng Bộ Lọc</button>
+                </aside>
+
+                <div class="results-grid">
+                    <div class="results-count">
+                        <p><strong>8 xe</strong> phù hợp với tìm kiếm</p>
+                        <select class="form-control form-control-sm">
+                            <option>Sắp xếp: Đề Xuất</option>
+                            <option>Giá: Thấp đến Cao</option>
+                            <option>Giá: Cao đến Thấp</option>
+                            <option>Đánh Giá</option>
+                        </select>
+                    </div>
+
+                    <div class="bikes-list">
+                        <div class="bike-card-horizontal">
+                            <img src="../images/placeholder-bike.png" alt="Toyota Camry" class="bike-image">
+                            <div class="bike-info">
+                                <div class="bike-header">
+                                    <div>
+                                        <h3>Toyota Camry</h3>
+                                        <p class="bike-type">Sedan Cao Cấp</p>
+                                    </div>
+                                    <div class="bike-rating">
+                                        <span class="star">★</span>
+                                        <span>4.8</span>
+                                        <span class="reviews-count">(24 đánh giá)</span>
+                                    </div>
+                                </div>
+                                <div class="bike-specs">
+                                    <span class="spec">2.5L</span>
+                                    <span class="spec">Tự Động</span>
+                                    <span class="spec">5 Chỗ</span>
+                                </div>
+                                <p class="bike-location">
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Có sẵn tại Hà Nội - Phố Cổ
+                                </p>
+                                <div class="bike-footer">
+                                    <div class="price-info">
+                                        <span class="price-amount">800,000₫</span>
+                                        <span class="price-period">/ngày</span>
+                                        <span class="total-price">Tổng: 4,000,000₫ cho 5 ngày</span>
+                                    </div>
+                                    <div class="bike-actions">
+                                        <a href="bike-details.html?id=1" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                                        <a href="checkout.html?id=1" class="btn btn-primary btn-sm">Đặt Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bike-card-horizontal">
+                            <img src="../images/placeholder-bike.png" alt="Mazda CX-5" class="bike-image">
+                            <div class="bike-info">
+                                <div class="bike-header">
+                                    <div>
+                                        <h3>Mazda CX-5</h3>
+                                        <p class="bike-type">SUV Crossover</p>
+                                    </div>
+                                    <div class="bike-rating">
+                                        <span class="star">★</span>
+                                        <span>4.9</span>
+                                        <span class="reviews-count">(31 đánh giá)</span>
+                                    </div>
+                                </div>
+                                <div class="bike-specs">
+                                    <span class="spec">2.0L</span>
+                                    <span class="spec">Tự Động</span>
+                                    <span class="spec">5 Chỗ</span>
+                                </div>
+                                <p class="bike-location">
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Có sẵn tại Hà Nội - Phố Cổ
+                                </p>
+                                <div class="bike-footer">
+                                    <div class="price-info">
+                                        <span class="price-amount">900,000₫</span>
+                                        <span class="price-period">/ngày</span>
+                                        <span class="total-price">Tổng: 4,500,000₫ cho 5 ngày</span>
+                                    </div>
+                                    <div class="bike-actions">
+                                        <a href="bike-details.html?id=3" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                                        <a href="checkout.html?id=3" class="btn btn-primary btn-sm">Đặt Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bike-card-horizontal">
+                            <img src="../images/placeholder-bike.png" alt="Honda CR-V" class="bike-image">
+                            <div class="bike-info">
+                                <div class="bike-header">
+                                    <div>
+                                        <h3>Honda CR-V</h3>
+                                        <p class="bike-type">SUV 7 Chỗ</p>
+                                    </div>
+                                    <div class="bike-rating">
+                                        <span class="star">★</span>
+                                        <span>4.7</span>
+                                        <span class="reviews-count">(18 đánh giá)</span>
+                                    </div>
+                                </div>
+                                <div class="bike-specs">
+                                    <span class="spec">1.5L Turbo</span>
+                                    <span class="spec">Tự Động</span>
+                                    <span class="spec">7 Chỗ</span>
+                                </div>
+                                <p class="bike-location">
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Có sẵn tại Hà Nội - Phố Cổ
+                                </p>
+                                <div class="bike-footer">
+                                    <div class="price-info">
+                                        <span class="price-amount">950,000₫</span>
+                                        <span class="price-period">/ngày</span>
+                                        <span class="total-price">Tổng: 4,750,000₫ cho 5 ngày</span>
+                                    </div>
+                                    <div class="bike-actions">
+                                        <a href="bike-details.html?id=7" class="btn btn-outline btn-sm">Xem Chi Tiết</a>
+                                        <a href="checkout.html?id=7" class="btn btn-primary btn-sm">Đặt Ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6-6h15m-6 0v-5"/>
+                        </svg>
+                        <span class="logo-text">VroomVroom.vn</span>
+                    </div>
+                    <p>Đối tác đáng tin cậy cho dịch vụ thuê xe ô tô tại Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VroomVroom.vn. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bike-search-results.js"></script>
+</body>
+</html>
