@@ -1,8 +1,8 @@
-# 🚗 VroomVroom - Hướng Dẫn Sử Dụng Website
+# 🚗 Uride - Hướng Dẫn Sử Dụng Website
 
 ## Giới Thiệu
 
-**VroomVroom.vn** là dịch vụ cho thuê xe ô tô trực tuyến tại Việt Nam. Website giúp bạn dễ dàng tìm kiếm, đặt xe và quản lý các đơn thuê xe của mình.
+**Uride.vn** là dịch vụ cho thuê xe ô tô trực tuyến tại Việt Nam. Website giúp bạn dễ dàng tìm kiếm, đặt xe và quản lý các đơn thuê xe của mình.
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### Bảng Màu Sắc
 
-Website VroomVroom sử dụng các màu sắc sau để tạo trải nghiệm trực quan và dễ nhận biết:
+Website Uride sử dụng các màu sắc sau để tạo trải nghiệm trực quan và dễ nhận biết:
 
 #### Màu Chủ Đạo
 | Màu | Mã màu | Sử dụng |
@@ -151,7 +151,7 @@ Website tự động điều chỉnh giao diện theo kích thước màn hình:
 - Chọn địa điểm nhận xe
 - Xem thời gian thuê xe
 - Nhấn "Tìm Xe Có Sẵn" để bắt đầu tìm kiếm
-- Tìm hiểu tại sao nên chọn VroomVroom
+- Tìm hiểu tại sao nên chọn Uride
 
 **Điểm nổi bật:**
 - Khung đặt xe nhanh ngay trên trang chủ
@@ -352,7 +352,7 @@ Menu chính xuất hiện trên tất cả các trang:
 
 | Mục | Chức năng |
 |-----|-----------|
-| **Logo VroomVroom** | Về trang chủ |
+| **Logo Uride** | Về trang chủ |
 | **Trang Chủ** | Trang đầu tiên, đặt xe nhanh |
 | **Xe Ô Tô** | Xem danh sách xe có sẵn |
 | **Địa Điểm** | Tìm các điểm nhận/trả xe |
@@ -469,4 +469,4 @@ Menu chính xuất hiện trên tất cả các trang:
 
 ---
 
-**Chúc bạn có những chuyến đi an toàn và thú vị cùng VroomVroom! 🚗💨**
+**Chúc bạn có những chuyến đi an toàn và thú vị cùng Uride! 🚗💨**

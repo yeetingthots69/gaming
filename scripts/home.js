@@ -46,7 +46,7 @@
             durationValue.textContent = '0 days';
         } else {
             durationValue.textContent = `${days} day${days !== 1 ? 's' : ''}`;
-            const days = VroomVroom.calculateDaysBetween(startDateInput.value, endDateInput.value);
+            const days = Uride.calculateDaysBetween(startDateInput.value, endDateInput.value);
         if (startDateInput.value && endDateInput.value) {
     const updateDuration = () => {
     // Calculate rental duration

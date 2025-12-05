@@ -1,4 +1,4 @@
-# 🎨 VroomVroom Static Site - CSS Style Guide
+# 🎨 Uride Static Site - CSS Style Guide
 
 ## Color Palette
 

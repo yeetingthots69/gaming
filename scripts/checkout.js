@@ -26,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (peripheralsTotal) {
             peripheralsTotal.querySelector('span:last-child').textContent = 
-                VroomVroom.formatCurrency(peripheralsPrice);
+                Uride.formatCurrency(peripheralsPrice);
         }
         
         const subtotalAmount = basePrice + peripheralsPrice + insurance + serviceFee;
         const taxAmount = subtotalAmount * taxRate;
         const totalAmount = subtotalAmount + taxAmount;
         
-        if (subtotal) subtotal.textContent = VroomVroom.formatCurrency(subtotalAmount);
-        if (tax) tax.textContent = VroomVroom.formatCurrency(taxAmount);
-        if (total) total.textContent = VroomVroom.formatCurrency(totalAmount);
+        if (subtotal) subtotal.textContent = Uride.formatCurrency(subtotalAmount);
+        if (tax) tax.textContent = Uride.formatCurrency(taxAmount);
+        if (total) total.textContent = Uride.formatCurrency(totalAmount);
     };
     
     // Listen to checkbox changes

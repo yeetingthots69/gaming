@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Export functions for use in other scripts
-window.VroomVroom = {
+window.Uride = {
     formatCurrency,
     formatDate,
     calculateDaysBetween
